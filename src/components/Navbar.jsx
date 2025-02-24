@@ -1,16 +1,28 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Logo from "../assets/images/Franchisify.in (1).png"; // Adjust path as needed
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // ✅ Scroll to About Section
+  // ✅ Scroll to About Section (Works from Any Page)
   const scrollToAbout = (event) => {
     event.preventDefault();
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/"); // Redirect to Home first
+      setTimeout(() => {
+        const aboutSection = document.getElementById("about");
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100); // Delay to allow navigation before scrolling
+    } else {
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -26,7 +38,7 @@ const Navigation = () => {
         <ul className="hidden md:flex space-x-4 text-sm font-medium">
           <li><Link to="/" className="text-white hover:text-blue-600 transition">Home</Link></li>
           <li><a href="#about" onClick={scrollToAbout} className="text-white hover:text-blue-600 transition">About</a></li>
-          <li><Link to="/services" className="text-white hover:text-blue-600 transition">Services</Link></li>
+          <li><Link to="/deservices" className="text-white hover:text-blue-600 transition">Services</Link></li>
           <li><Link to="/contact" className="text-white hover:text-blue-600 transition">Contact</Link></li>
         </ul>
 
@@ -56,7 +68,7 @@ const Navigation = () => {
       <div className={`${isOpen ? "block" : "hidden"} md:hidden bg-transparent border-t-0 transition-all duration-300 ease-in-out font-serif`}>
         <div className="px-6 py-4 space-y-4">
           <Link to="/" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/services" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Services</Link>
+          <Link to="/deservices" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Services</Link>
           <a href="#about" onClick={scrollToAbout} className="block text-white hover:text-blue-600 transition">About</a>
           <Link to="/contact" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
@@ -66,3 +78,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

@@ -1,38 +1,44 @@
 import React from "react";
 import { FaBusinessTime, FaBalanceScale, FaBullhorn, FaUsers } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom"; 
 
 const services = [
   {
     title: "Franchise Model Development",
-    description: "We help create a scalable and profitable franchise model tailored to your business needs.",
+    description: "We create structured franchise models to help businesses expand efficiently.",
     icon: <FaBusinessTime />,
   },
   {
     title: "Legal Support",
-    description: "Our expert legal team ensures your franchise operates within regulations and compliance.",
+    description: "Our team ensures legal compliance and smooth operations for your franchise.",
     icon: <FaBalanceScale />,
   },
   {
     title: "Lead Generation",
-    description: "We implement data-driven marketing strategies to attract the right franchise partners.",
+    description: "We use marketing strategies to attract and convert potential franchisees.",
     icon: <FaBullhorn />,
   },
   {
     title: "Franchise Selling",
-    description: "Expand your franchise network with our expert franchise matchmaking and consulting services.",
+    description: "We connect businesses with the right franchise partners for seamless growth.",
     icon: <FaUsers />,
   },
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  // Function to navigate & scroll to top
+  const handleLearnMore = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top
+    navigate("/deservices"); // Navigate to the page
+  };
+
   return (
-    <section className="relative bg-gradient-to-b  to-blue-900 from-gray-900 py-24 px-6 overflow-hidden">
+    <section className="relative bg-gradient-to-b to-blue-900 from-gray-900 py-24 px-6 overflow-hidden">
       {/* Background Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: "url('/your-image-path.svg')" }} 
-      ></div>
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/your-image-path.svg')" }}></div>
 
       <div className="relative max-w-7xl mx-auto text-center">
         <motion.h2
@@ -65,6 +71,12 @@ const Services = () => {
               <div className="text-blue-500 text-6xl mb-6">{service.icon}</div>
               <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
               <p className="mt-4 text-gray-200 leading-relaxed">{service.description}</p>
+              <button
+                onClick={handleLearnMore}
+                className="mt-6 px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg transition duration-300 hover:bg-blue-500"
+              >
+                Learn More
+              </button>
             </motion.div>
           ))}
         </div>
