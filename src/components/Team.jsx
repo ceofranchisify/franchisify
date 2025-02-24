@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 // ✅ Import images from `src/assets/images/`
-import shafi from "../assets/images/SHAFI_SIR-removebg-preview.png";
+import shafi from "../assets/images/IMG_3596.png";
 import jino from "../assets/images/jino-removebg-preview.png";
 import praveen from "../assets/images/praveen-removebg-preview.png";
 

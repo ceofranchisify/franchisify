@@ -56,7 +56,7 @@ const Navigation = () => {
       <div className={`${isOpen ? "block" : "hidden"} md:hidden bg-transparent border-t-0 transition-all duration-300 ease-in-out font-serif`}>
         <div className="px-6 py-4 space-y-4">
           <Link to="/" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/pricing" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Plan</Link>
+          <Link to="/services" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Services</Link>
           <a href="#about" onClick={scrollToAbout} className="block text-white hover:text-blue-600 transition">About</a>
           <Link to="/contact" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
