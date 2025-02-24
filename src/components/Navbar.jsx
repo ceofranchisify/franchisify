@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/Franchisify.in-logo-white-png-(2).png"; // Adjust path as needed
+import Logo from "../assets/images/Franchisify.in (1).png"; // Adjust path as needed
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

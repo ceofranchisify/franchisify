@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import heroImage from "../assets/images/franch.png";
 import missionImage from "../assets/images/IMG13.jpg";
 import visionImage from "../assets/images/Franchisify.in (1)_page-0009.jpg";
+import About from "../pages/About";
 
 const HeroAbout = () => {
   return (
@@ -19,7 +20,8 @@ const HeroAbout = () => {
             Revolutionizing the Realm of Franchising
           </h1>
           <p className="mt-6 text-lg text-gray-200">
-            The ultimate franchise growth platform, empowering businesses with structured solutions and AI-powered insights.
+            The ultimate franchise growth platform, empowering businesses with
+            structured solutions and AI-powered insights.
           </p>
           <div className="mt-10 flex flex-col lg:flex-row items-center gap-6">
             <motion.button
@@ -54,7 +56,7 @@ const HeroAbout = () => {
       </div>
 
       {/* About Section */}
-      <div className="relative bg-white text-center py-24 px-10">
+      <div id="about" className="relative bg-white text-center py-24 px-10">
         <motion.h1
           className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500"
           initial={{ opacity: 0, y: -20 }}
@@ -69,7 +71,15 @@ const HeroAbout = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Franchisify is your comprehensive resource for launching a new business. We connect franchisors with franchisees, presenting attractive and profitable opportunities for both parties while supporting positive business growth.
+          Franchisify is your comprehensive resource for launching a new
+          business. We connect franchisors with franchisees, presenting
+          attractive and profitable opportunities for both parties while
+          supporting positive business growth. Our mission at Franchisify is to
+          turn businesses into thriving franchises that encourage long-term
+          financial achievements. Our goal is to make your business a
+          sustainable and scalable brand. Even though India's franchising market
+          currently lacks knowledge and enthusiasm, it has the potential to
+          greatly improve your company.
         </motion.p>
       </div>
 
@@ -84,7 +94,13 @@ const HeroAbout = () => {
         >
           <h1 className="text-4xl font-bold text-cyan-400">Our Mission</h1>
           <p className="mt-4 text-lg text-gray-300">
-            Our mission at Franchisify is to turn companies into profitable franchises that provide long-term success.
+            Our mission at Franchisify is to turn companies into profitable
+            franchises that provide long-term success. We encourage business
+            models which are supported by market research and industry best
+            practices, that help us guarantee effectiveness, profitability, and
+            growth. To create a sustainable ecosystem where franchisors and
+            franchisees thrive together and introduce you to seamless and
+            structured expansion plans.{" "}
           </p>
         </motion.div>
         <motion.img
@@ -113,7 +129,12 @@ const HeroAbout = () => {
         >
           <h1 className="text-4xl font-bold text-purple-400">Our Vision</h1>
           <p className="mt-4 text-lg text-gray-300">
-            Franchisify envisions a world in which firms can maximize their potential through strategic franchising.
+            Franchisify envisions a world in which firms can maximize their
+            potential through strategic franchising. They want to provide
+            entrepreneurs with proven business concepts for long-term growth and
+            profitability. They offer experienced advice and innovative
+            solutions to ensure that any business may effectively develop and
+            survive in today's competitive market.{" "}
           </p>
         </motion.div>
       </div>
