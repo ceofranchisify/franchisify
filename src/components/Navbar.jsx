@@ -36,10 +36,10 @@ const Navigation = () => {
 
         {/* ✅ Desktop Navigation */}
         <ul className="hidden md:flex space-x-4 text-sm font-medium">
-          <li><Link to="/" className="text-white hover:text-blue-600 transition">Home</Link></li>
-          <li><a href="#about" onClick={scrollToAbout} className="text-white hover:text-blue-600 transition">About</a></li>
-          <li><Link to="/deservices" className="text-white hover:text-blue-600 transition">Services</Link></li>
-          <li><Link to="/contact" className="text-white hover:text-blue-600 transition">Contact</Link></li>
+          <li><Link to="/" className="text-black hover:text-blue-600 transition">Home</Link></li>
+          <li><a href="#about" onClick={scrollToAbout} className="text-black hover:text-blue-600 transition">About</a></li>
+          <li><Link to="/deservices" className="text-black hover:text-blue-600 transition">Services</Link></li>
+          <li><Link to="/contact" className="text-black hover:text-blue-600 transition">Contact</Link></li>
         </ul>
 
         {/* ✅ Mobile Menu Button */}
@@ -67,10 +67,10 @@ const Navigation = () => {
       {/* ✅ Mobile Navigation Menu */}
       <div className={`${isOpen ? "block" : "hidden"} md:hidden bg-transparent border-t-0 transition-all duration-300 ease-in-out font-serif`}>
         <div className="px-6 py-4 space-y-4">
-          <Link to="/" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/deservices" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Services</Link>
-          <a href="#about" onClick={scrollToAbout} className="block text-white hover:text-blue-600 transition">About</a>
-          <Link to="/contact" className="block text-white hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/" className="block text-black hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/deservices" className="block text-black hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Services</Link>
+          <a href="#about" onClick={scrollToAbout} className="block text-black hover:text-blue-600 transition">About</a>
+          <Link to="/contact" className="block text-black hover:text-blue-600 transition" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       </div>
     </nav>
