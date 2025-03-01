@@ -7,7 +7,7 @@ const FranchiseServices = () => {
     <section className="py-16 px-6">
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Franchise Model Development Section */}
-        <section id="franchise-model-development" className="bg-blue-600 text-white py-16 px-6">
+        <section id="franchise-model-development" className="bg-gradient-to-r from-[#83C4E3] to-[#5A9EC2] text-white py-16 px-6">
           <div className="text-center">
             <FaBusinessTime className="text-white text-6xl mx-auto mb-6" />
             <h2 className="text-4xl font-extrabold mb-4">Franchise Model Development</h2>
@@ -59,7 +59,7 @@ const FranchiseServices = () => {
         </section>
 
         {/* Lead Generation Section */}
-        <section id="lead-generation" className="bg-blue-600 text-white py-16 px-6">
+        <section id="lead-generation" className="bg-gradient-to-r from-[#83C4E3] to-[#5A9EC2] text-white py-16 px-6">
           <div className="text-center">
             <FaBullhorn className="text-white text-6xl mx-auto mb-6" />
             <h2 className="text-4xl font-extrabold mb-4">Lead Generation</h2>

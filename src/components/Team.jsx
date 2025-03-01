@@ -71,7 +71,7 @@ const Team = () => {
           {teamMembers.map((member, i) => (
             <motion.div
               key={i}
-              className="bg-gradient-to-b  to-blue-900 from-gray-900 shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 flex flex-col items-center text-center p-6 rounded-xl"
+              className="bg-gradient-to-r from-[#83C4E3] to-[#5A9EC2] shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 flex flex-col items-center text-center p-6 rounded-xl"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"

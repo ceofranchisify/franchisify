@@ -45,13 +45,13 @@ const Services = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b to-blue-900 from-gray-900 py-24 px-6 overflow-hidden">
+    <section className="relative bg-gradient-to-r from-[#83C4E3] to-[#5A9EC2] py-24 px-6 overflow-hidden">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/your-image-path.svg')" }}></div>
 
       <div className="relative max-w-7xl mx-auto text-center">
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-md"
+          className="text-4xl md:text-5xl font-extrabold text-black drop-shadow-md"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -59,7 +59,7 @@ const Services = () => {
           Our Services
         </motion.h2>
         <motion.p
-          className="mt-4 text-lg md:text-xl text-gray-100 max-w-3xl mx-auto"
+          className="mt-4 text-lg md:text-xl text-black max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -77,7 +77,7 @@ const Services = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="text-blue-500 text-6xl mb-6">{service.icon}</div>
+              <div className="text-black text-6xl mb-6">{service.icon}</div>
               <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
               <p className="mt-4 text-gray-200 leading-relaxed">{service.description}</p>
               <button
