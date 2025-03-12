@@ -5,6 +5,7 @@ import Services from "../components/Services";
 import Team from "../components/Team";
 import ChatBot from "./Chatbot";
 import WhyFranchisify from "./WhyChooseus";
+import Customers from "./Ourcompanies";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero />
       <WhyFranchisify />
       <Services />
+      <Customers />
       <Team />
       <ChatBot />
 

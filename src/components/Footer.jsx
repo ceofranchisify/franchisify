@@ -37,7 +37,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-black ">Follow Us</h3>
           <div className="flex justify-center md:justify-start mt-4 space-x-4">
-            <a href="#" className="text-black hover:text-black transition text-2xl"><FaInstagram /></a>
+            <a href="" className="text-black hover:text-black transition text-2xl"><FaInstagram /></a>
             <a href="#" className="text-black hover:text-black transition text-2xl"><FaFacebook /></a>
             <a href="#" className="text-black hover:text-black transition text-2xl"><FaYoutube /></a>
             <a href="#" className="text-black hover:text-black transition text-2xl"><FaLinkedin /></a>
