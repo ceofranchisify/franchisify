@@ -10,7 +10,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              About <span className="text-blue-600">Franchisify</span>
+              About <span className="text-blue-700">Franchisify</span>
             </motion.h1>
             <motion.p
               className="mt-6 text-center text-lg max-w-3xl mx-auto leading-relaxed"

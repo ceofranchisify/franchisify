@@ -20,7 +20,7 @@ const franchiseData = [
 
 const Customers = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-blue-600">
       {/* Heading */}
       <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
         Our Franchises
