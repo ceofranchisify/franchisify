@@ -7,6 +7,7 @@ import akam from '../assets/images/akam-logo-green.png';
 import careerCafe from '../assets/images/careercafe.jpg';
 import studyinindia from '../assets/images/siilogo-1.png';
 import kovai from '../assets/images/Kovai.png';
+import babyque from '../assets/images/babyque.png';
 
 const franchiseData = [
   { image: sib, url: 'https://studyinbengaluru.com' },
@@ -14,6 +15,7 @@ const franchiseData = [
   { image: careerCafe, url: 'https://careercafe.co' },
   { image: studyinindia, url: 'https://thestudyinindia.com' },
   { image: kovai },
+  { image:babyque  },
 ];
 
 const Customers = () => {
