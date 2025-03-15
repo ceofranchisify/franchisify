@@ -5,11 +5,13 @@ import Team from "../components/Team";
 import ChatBot from "../pages/Chatbot";
 import WhyFranchisify from "../pages/WhyChooseus"; // Ensure correct casing
 import Customers from "../pages/Ourcompanies"; // Ensure correct casing
+import About from "./About";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <About />
       <WhyFranchisify />
       <Services />
       <Customers />

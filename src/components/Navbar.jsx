@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import Logo from "../assets/images/Franchisify.in (1).png"; // Adjust path as needed
+import Logo from "../assets/images/Franchisify.in b (2).png"; // Adjust path as needed
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +36,10 @@ const Navigation = () => {
 
         {/* ✅ Desktop Navigation */}
         <ul className="hidden md:flex space-x-4 text-sm font-medium">
-          <li><Link to="/" className="text-black hover:text-blue-600 transition">Home</Link></li>
-          <li><a href="#about" onClick={scrollToAbout} className="text-black hover:text-blue-600 transition">About</a></li>
-          <li><Link to="/deservices" className="text-black hover:text-blue-600 transition">Services</Link></li>
-          <li><Link to="/contact" className="text-black hover:text-blue-600 transition">Contact</Link></li>
+          <li><Link to="/" className="text-white hover:text-blue-600 transition">Home</Link></li>
+          <li><a href="#about" onClick={scrollToAbout} className="text-white hover:text-blue-600 transition">About</a></li>
+          <li><Link to="/deservices" className="text-white hover:text-blue-600 transition">Services</Link></li>
+          <li><Link to="/contact" className="text-white hover:text-blue-600 transition">Contact</Link></li>
         </ul>
 
         {/* ✅ Mobile Menu Button */}

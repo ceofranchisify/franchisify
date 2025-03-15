@@ -20,10 +20,10 @@ const franchiseData = [
 
 const Customers = () => {
   return (
-    <section className="py-16 bg-blue-600">
+    <section className="py-16 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155]">
       {/* Heading */}
-      <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-        Our Franchises
+      <h2 className="text-5xl font-bold text-center text-white mb-12">
+        OnBoarded Clients
       </h2>
 
       {/* Container */}
@@ -35,13 +35,13 @@ const Customers = () => {
               href={franchise.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white shadow-lg rounded-2xl p-4 flex justify-center items-center transition-all transform hover:scale-105 hover:shadow-2xl"
+              className="bg-white  rounded-2xl p-4 flex justify-center items-center transition-all transform hover:scale-105 hover:shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <img
-                className="w-24 h-24 object-contain"
+                className="w-34 h-34 object-contain"
                 src={franchise.image}
                 alt={`Franchise ${index + 1}`}
               />

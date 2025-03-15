@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-[#83C4E3] to-[#5A9EC2] overflow-x-hidden">
+    <section className="py-16 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] overflow-x-hidden">
       <div className="container mx-auto px-6 pt-4 max-w-6xl">
         <h2 className="text-4xl font-bold text-center text-white mb-4">Contact Us</h2>
         <p className="text-center text-xl text-gray-300 mb-12">
