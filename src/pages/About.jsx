@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import missionImage from "../assets/images/IMG13.jpg";
+import missionImage from "../assets/images/hero5.jpg";
 import visionImage from "../assets/images/Franchisify.in (1)_page-0009.jpg";
 
 const About = () => {
@@ -55,7 +55,7 @@ const About = () => {
             <img
               src={visionImage}
               alt="Vision"
-              className="w-70 sm:w-86 md:w-full max-w-lg rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300"
+              className="w-80 sm:w-96 md:w-full max-w-lg rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300"
             />
             <div className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] p-8 rounded-3xl shadow-xl border border-purple-500/50 backdrop-blur-lg">
               <h1 className="text-4xl font-bold mb-5">Our Vision</h1>
