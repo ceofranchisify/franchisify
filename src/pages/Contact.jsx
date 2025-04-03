@@ -32,7 +32,7 @@ const Contact = () => {
     const encodedMessage = encodeURIComponent(message);
 
     // WhatsApp API link
-    const whatsappURL = `https://wa.me/6282929177?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/9035052280?text=${encodedMessage}`;
 
     // Open WhatsApp in a new tab
     window.open(whatsappURL, "_blank");
