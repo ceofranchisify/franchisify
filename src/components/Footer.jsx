@@ -1,6 +1,7 @@
 import React from "react";
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebook, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebook, FaYoutube, FaInstagram, FaLinkedin, FaQuora } from "react-icons/fa";
 import logo from "../assets/images/Franchisify.in 2 (3).jpg"; // ✅ Replace with your actual logo path
+import { FaX } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -37,10 +38,13 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-white ">Follow Us</h3>
           <div className="flex justify-center md:justify-start mt-4 space-x-4">
-            <a href="" className="text-white hover:text-white transition text-2xl"><FaInstagram /></a>
-            <a href="#" className="text-white hover:text-white transition text-2xl"><FaFacebook /></a>
-            <a href="#" className="text-white hover:text-white transition text-2xl"><FaYoutube /></a>
-            <a href="#" className="text-white hover:text-white transition text-2xl"><FaLinkedin /></a>
+            <a href="https://www.instagram.com/franchisify.in/" className="text-white hover:text-white transition text-2xl"><FaInstagram /></a>
+            <a href="https://www.facebook.com/profile.php?id=61573137707448" className="text-white hover:text-white transition text-2xl"><FaFacebook /></a>
+            <a href="https://x.com/Franchisify_in" className="text-white hover:text-white transition text-2xl"><FaX/></a>
+            <a href="https://www.youtube.com/@Franchisify-r1m" className="text-white hover:text-white transition text-2xl"><FaYoutube /></a>
+            <a href="https://www.linkedin.com/company/franchisify-in/?viewAsMember=true" className="text-white hover:text-white transition text-2xl"><FaLinkedin /></a>
+            <a href="https://www.quora.com/profile/Franchisify" className="text-white hover:text-white transition text-2xl"><FaQuora /></a>
+
           </div>
         </div>
 
