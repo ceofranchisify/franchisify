@@ -1,34 +1,44 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaChartLine, FaCogs, FaDollarSign, FaLightbulb } from "react-icons/fa";
+import why from "../assets/images/why.jpg";
 
 const highlights = [
   {
     title: "Successful Franchise Models",
     description: "Designed to maximize your brand's potential and ensure sustainable growth.",
-    icon: <FaChartLine className="text-5xl text-blue-500 drop-shadow-glow" />,
+    icon: <FaChartLine className="text-5xl text-[#fbbf24] drop-shadow-glow" />,
   },
   {
     title: "Operational Strategies",
     description: "Providing step-by-step guidance to streamline your franchise operations.",
-    icon: <FaCogs className="text-5xl text-green-400 drop-shadow-glow" />,
+    icon: <FaCogs className="text-5xl text-[#fbbf24] drop-shadow-glow" />,
   },
   {
     title: "Profitability Focus",
     description: "Ensuring that expansion leads to tangible financial success.",
-    icon: <FaDollarSign className="text-5xl text-yellow-500 drop-shadow-glow" />,
+    icon: <FaDollarSign className="text-5xl text-[#fbbf24] drop-shadow-glow" />,
   },
   {
     title: "Market Insights",
     description: "Equipping franchisees with essential tools and industry knowledge.",
-    icon: <FaLightbulb className="text-5xl text-purple-400 drop-shadow-glow" />,
+    icon: <FaLightbulb className="text-5xl text-[#fbbf24] drop-shadow-glow" />,
   },
 ];
 
 const WhyFranchisify = () => {
   return (
-    <section className="relative bg-[#0A192F] text-white py-24 px-6 overflow-hidden">
-      <div className="relative max-w-6xl mx-auto text-center">
+    <section
+      className="relative text-white py-24 px-6 overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${why})`,
+        backgroundAttachment: "fixed", // Adds smooth parallax effect
+      }}
+    >
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/50 z-0"></div>
+
+      <div className="relative max-w-6xl mx-auto text-center z-10">
         {/* Section Title */}
         <motion.h2
           className="text-4xl md:text-5xl font-extrabold text-white tracking-wide"
@@ -36,8 +46,9 @@ const WhyFranchisify = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Why <span className="text-blue-400">Franchisify?</span>
+          Why <span className="text-[#fbbf24]">Franchisify?</span>
         </motion.h2>
+
         <motion.p
           className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +69,7 @@ const WhyFranchisify = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="mb-4">{item.icon}</div>
+              <div className="mb-4" aria-hidden="true">{item.icon}</div>
               <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
               <p className="mt-4 text-gray-400 leading-relaxed">{item.description}</p>
             </motion.div>

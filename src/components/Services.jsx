@@ -52,10 +52,10 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Our <span className="text-blue-400">Services</span>
+          Our <span className="text-[#fbbf24]">Services</span>
         </motion.h2>
         <motion.p
-          className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
+          className="mt-4 text-lg md:text-xl text-black max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -78,7 +78,7 @@ const Services = () => {
               <p className="mt-4 text-gray-300 leading-relaxed">{service.description}</p>
               <button
                 onClick={() => handleLearnMore(service.id)}
-                className="mt-6 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="mt-6 px-6 py-3 bg-[#fbbf24] text-white font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-lg"
               >
                 Learn More
               </button>
