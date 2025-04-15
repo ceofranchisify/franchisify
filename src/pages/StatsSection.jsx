@@ -8,7 +8,6 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import CountUp from "react-countup";
 
 const stats = [
   { icon: CalendarDays, number: 4, label: "Years" },
@@ -36,13 +35,9 @@ const StatsSection = () => {
               viewport={{ once: true }}
               className="flex flex-col items-center"
             >
-              <Icon
-                size={40}
-                className="text-[#0F172A]"
-              />
+              <Icon size={40} className="text-[#0F172A]" />
               <h3 className="text-2xl font-bold text-gray-900 mt-2">
-                <CountUp start={0} end={item.number} duration={2} />{" "}
-                <span className="text-[#fbbf24]">+</span>
+                {item.number} <span className="text-[#fbbf24]">+</span>
               </h3>
               <p className="text-sm text-gray-500 font-medium mt-1">{item.label}</p>
             </motion.div>
