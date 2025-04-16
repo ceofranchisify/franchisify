@@ -15,8 +15,8 @@ const franchises = [
   {
     name: "Career Cafe",
     logo: ccafe,
-    investment: "₹10 - ₹15 Lakhs",
-    sqft: "800 - 1200 sq.ft",
+    investment: "₹45 - ₹53 Lakhs",
+    sqft: "2500 sq.ft",
   },
 ];
 
@@ -33,7 +33,7 @@ const Education = () => {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
         <h1 className="relative text-4xl md:text-5xl text-white font-bold drop-shadow-lg">
           Education Franchises
-        </h1>
+        </h1>  
       </div>
 
       {/* Breadcrumb */}

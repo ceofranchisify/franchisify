@@ -9,7 +9,7 @@ const franchises = [
     name: "Kovai Rawuther Biriyani",
     logo: kovai,
     investment: "₹7.5 - ₹12.5 Lakhs",
-    sqft: "3000 sq.ft",
+    sqft: "300 sq.ft",
   }
 ];
 
