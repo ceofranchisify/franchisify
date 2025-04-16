@@ -57,11 +57,11 @@ const Footer = () => {
           </p>
           <p className="mt-3 flex items-center justify-center md:justify-start text-white">
             <FaPhone className="mr-2 text-lg" />
-            +91 9035052280
+            +91 9035854093
           </p>
           <p className="mt-3 flex items-center justify-center md:justify-start text-white">
             <FaEnvelope className="mr-2 text-lg" />
-            fdm@franchisify.in
+           enquiry@franchisify.in
           </p>
         </div>
       </div>
