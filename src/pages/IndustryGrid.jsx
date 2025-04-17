@@ -26,7 +26,7 @@ const IndustryGrid = () => {
   return (
     <section className="py-16 bg-white text-center">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-        Extensive Network of Branches & Industries to choose from
+        Extensive Network of Brands & Industries to choose from
       </h2>
       <div className="w-24 h-1 bg-[#fbbf24] mx-auto my-4"></div>
 

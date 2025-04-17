@@ -14,7 +14,7 @@ const teamMembers = [
   { name: "Shafi Shoukath", role: "Chairman", image: shafi },
   { name: "Jino Joseph", role: "Chief Executive Officer (CEO)", image: jino },
   { name: "Praveen Kumar", role: "Franchise Development Manager (FDM)", image: praveen },
-  { name: "Jithin Sivadas", role: "Branch Onboarding Manager(BOM)", image: jithin },
+  { name: "Jithin Sivadas", role: "Brand Onboarding Manager(BOM)", image: jithin },
   { name: "Ashwath E", role: "Business Consultant Manager(BCM)", image: ashwath }
 ];
 
