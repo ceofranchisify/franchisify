@@ -1,33 +1,34 @@
-import React, { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/images/Franchisify.in b (2).png"; // Adjust path as needed
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
 
-  // Scroll to About Section (Works from Any Page)
-  const scrollToAbout = (event) => {
-    event.preventDefault();
-    if (location.pathname !== "/") {
-      navigate("/");
-      setTimeout(() => {
-        const aboutSection = document.getElementById("about");
-        if (aboutSection) {
-          aboutSection.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    } else {
-      const aboutSection = document.getElementById("about");
-      if (aboutSection) {
-        aboutSection.scrollIntoView({ behavior: "smooth" });
+  // Effect to detect scroll event and change navbar background color
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
       }
-    }
-  };
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-transparent">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-darkblue shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
@@ -48,7 +49,6 @@ const Navigation = () => {
           <li>
             <a
               href="#about"
-              onClick={scrollToAbout}
               className="text-white hover:text-blue-500 transition-all duration-200"
             >
               About
@@ -127,7 +127,10 @@ const Navigation = () => {
           <a
             href="#about"
             onClick={(e) => {
-              scrollToAbout(e);
+              e.preventDefault();
+              document.getElementById("about")?.scrollIntoView({
+                behavior: "smooth",
+              });
               setIsOpen(false);
             }}
             className="block text-white hover:text-blue-500 transition"
