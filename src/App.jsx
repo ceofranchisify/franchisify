@@ -8,6 +8,7 @@ import FranchiseModelDevelopment from "./pages/Desservices";
 import Contact from "./pages/Contact";
 import Education from "./pages/Education";
 import Restaurant from "./pages/Restaurant";
+import Retail from "./pages/Retail";
 import PrivacyPolicy from "./pages/privacypolicy";
 import TermsAndConditions from "./pages/TermsandConditions";
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/deservices" element={<FranchiseModelDevelopment />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/education" element={<Education />} />
+        <Route path="/retail" element={<Retail />} />
         <Route path="/restaurant" element={<Restaurant />} />
         <Route path="/privacy" element={<PrivacyPolicy />}/>
         <Route path="/terms" element={<TermsAndConditions />}/>

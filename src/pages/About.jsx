@@ -4,41 +4,45 @@ import missionImage from "../assets/images/Franchisify.in (1)_page-0009.jpg";
 
 const About = () => {
   return (
-    <div id="about" className="relative py-16 px-6 sm:px-10">
-      {/* About Section */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 rounded-2xl overflow-hidden shadow-2xl">
-        {/* Left Column: Title */}
-        <motion.div
-          className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] text-white flex justify-center items-center p-8 sm:p-10"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-            About <span className="text-[#fbbf24]">Franchisify</span>
-          </h1>
-        </motion.div>
+    <div id="about" className="bg-white">
+      {/* About Intro Section */}
+      <div className="relative py-20 px-6 sm:px-10 bg-gray-50">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 rounded-2xl overflow-hidden shadow-xl">
+          {/* Title */}
+          <motion.div
+            className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] text-white flex justify-center items-center p-10"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-center">
+              About <span className="text-yellow-400">Franchisify</span>
+            </h1>
+          </motion.div>
 
-        {/* Right Column: Content */}
-        <motion.div
-          className="bg-white p-8 sm:p-10 flex flex-col justify-center rounded-tr-2xl lg:rounded-none"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-            Franchisify is your comprehensive resource for launching a new
-            business. We connect franchisors with franchisees, presenting
-            attractive and profitable opportunities for both parties while
-            supporting positive business growth.
-          </p>
-          <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
-            Our mission at Franchisify is to turn businesses into thriving
-            franchises that encourage long-term financial achievements. Even
-            though India's franchising market currently lacks knowledge and
-            enthusiasm, it has the potential to greatly improve your company.
-          </p>
-        </motion.div>
+          {/* Description */}
+          <motion.div
+            className="bg-white p-10 flex flex-col justify-center"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-gray-700 text-lg leading-relaxed">
+              <strong className="text-[#0F172A]">Franchisify</strong> is your
+              trusted partner for launching and scaling franchise-based
+              businesses. We connect franchisors with the right franchisees and
+              empower entrepreneurs with valuable opportunities for sustainable
+              growth.
+            </p>
+            <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+              Our goal is to unlock the true potential of India’s franchising
+              industry by turning businesses into thriving franchises backed by
+              strategy and insight.
+            </p>
+          </motion.div>
+        </div>
       </div>
 
       {/* Vision, Image, Mission Section */}
@@ -46,13 +50,15 @@ const About = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-stretch">
           {/* Vision */}
           <motion.div
-            className="flex flex-col h-full justify-center"
+            className="flex flex-col justify-between h-full"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] p-8 rounded-3xl shadow-xl border border-purple-500/50 backdrop-blur-lg h-full min-h-[450px] flex flex-col justify-between">
-              <h1 className="text-4xl font-bold mb-5">Our Vision</h1>
+            <div className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] p-8 rounded-3xl shadow-xl border border-purple-500/50 backdrop-blur-lg h-full flex flex-col justify-between">
+              <h1 className="text-4xl font-bold mb-5 text-center">
+                Our Vision
+              </h1>
               <p className="text-lg leading-relaxed">
                 <span className="text-purple-400 font-semibold">
                   Franchisify
@@ -84,13 +90,13 @@ const About = () => {
 
           {/* Mission */}
           <motion.div
-            className="flex flex-col h-full justify-center"
+            className="flex flex-col justify-between h-full"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] p-8 rounded-3xl shadow-xl border border-cyan-500/50 backdrop-blur-lg h-full min-h-[450px] flex flex-col justify-between">
-              <h1 className="text-4xl font-bold mb-5">Our Mission</h1>
+            <div className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] p-8 rounded-3xl shadow-xl border border-cyan-500/50 backdrop-blur-lg h-full flex flex-col justify-between">
+              <h1 className="text-4xl font-bold mb-5 text-center">Our Mission</h1>
               <p className="text-lg leading-relaxed">
                 Our mission at{" "}
                 <span className="text-cyan-400 font-semibold">Franchisify</span>{" "}

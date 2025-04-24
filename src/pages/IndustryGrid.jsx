@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const industries = [
   { icon: <FaUtensils size={50} />, label: "Restaurant", route: "/restaurant" },
   { icon: <FaBook size={50} />, label: "Education", route: "/education" },
-  { icon: <FaStore size={50} />, label: "Retail" },
+  { icon: <FaStore size={50} />, label: "Retail", route:"/retail"},
   { icon: <FaWalking size={50} />, label: "Gym" },
   { icon: <FaSpa size={50} />, label: "Wellness" },
   { icon: <FaGem size={50} />, label: "Jewelry" },

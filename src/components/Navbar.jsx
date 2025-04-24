@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/Franchisify.in b (2).png"; // Adjust path as needed
+import Logo from "../assets/images/Franchisify.in-logo-white-png-(2).png"; // Adjust path as needed
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Effect to detect scroll event and change navbar background color
+  // Change navbar background on scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -26,7 +26,7 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-darkblue shadow-md" : "bg-transparent"
+        scrolled ? "bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] shadow-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -42,37 +42,43 @@ const Navigation = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-10 text-lg font-semibold items-center">
           <li>
-            <Link to="/" className="text-white hover:text-blue-500 transition-all duration-200">
+            <Link to="/" className="text-white hover:text-orange-400 transition-all duration-200">
               Home
             </Link>
           </li>
           <li>
             <a
               href="#about"
-              className="text-white hover:text-blue-500 transition-all duration-200"
+              className="text-white hover:text-orange-400 transition-all duration-200"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("about")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
             >
               About
             </a>
           </li>
           <li>
-            <Link to="/deservices" className="text-white hover:text-blue-500 transition-all duration-200">
+            <Link to="/deservices" className="text-white hover:text-orange-400 transition-all duration-200">
               Services
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="text-white hover:text-blue-500 transition-all duration-200">
+            <Link to="/contact" className="text-white hover:text-orange-400 transition-all duration-200">
               Career
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="text-white hover:text-blue-500 transition-all duration-200">
+            <Link to="/contact" className="text-white hover:text-orange-400 transition-all duration-200">
               Contact
             </Link>
           </li>
         </ul>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white focus:outline-none"
@@ -107,19 +113,19 @@ const Navigation = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } md:hidden bg-transparent border-t-0 transition-all duration-300 ease-in-out font-serif`}
+        } md:hidden bg-[#1e293b] transition-all duration-300 ease-in-out font-serif w-full`}
       >
         <div className="px-8 py-6 space-y-5 text-center text-lg font-semibold">
           <Link
             to="/"
-            className="block text-white hover:text-blue-500 transition"
+            className="block text-white hover:text-orange-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/deservices"
-            className="block text-white hover:text-blue-500 transition"
+            className="block text-white hover:text-orange-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Services
@@ -133,13 +139,13 @@ const Navigation = () => {
               });
               setIsOpen(false);
             }}
-            className="block text-white hover:text-blue-500 transition"
+            className="block text-white hover:text-orange-400 transition"
           >
             About
           </a>
           <Link
             to="/contact"
-            className="block text-white hover:text-blue-500 transition"
+            className="block text-white hover:text-orange-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Contact

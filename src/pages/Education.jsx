@@ -1,4 +1,3 @@
-// src/components/Education.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import sib from "../assets/images/SIB.jpg";
@@ -22,43 +21,44 @@ const franchises = [
 
 const Education = () => {
   return (
-    <div className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] min-h-screen">
+    <div className="bg-gray-50 min-h-screen font-sans">
       {/* Hero Section */}
       <div
-        className="h-96 bg-cover bg-center relative flex items-center justify-center"
+        className="h-80 bg-cover bg-center relative flex items-center justify-center"
         style={{
           backgroundImage: `url(${educationfranchise})`,
         }}
       >
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-        <h1 className="relative text-4xl md:text-5xl text-white font-bold drop-shadow-lg">
+        <div className="absolute inset-0 bg-black/50 "></div>
+        <h1 className="relative text-3xl md:text-4xl text-white font-bold drop-shadow-lg">
           Education Franchises
-        </h1>  
+        </h1>
       </div>
 
       {/* Breadcrumb */}
       <div className="p-4 bg-white shadow text-gray-700 text-sm">
-        <Link to="/" className="hover:text-orange-500 font-medium">Home</Link> <span className="mx-1"> / </span>
+        <Link to="/" className="hover:text-orange-500 font-medium">Home</Link>
+        <span className="mx-1"> / </span>
         <span className="font-semibold">Education</span>
       </div>
 
       {/* Franchise Cards */}
-      <div className="p-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="p-6 grid gap-4 justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {franchises.map((item, index) => (
-          <Link to="/contact" key={index}>
-            <div className="bg-white shadow-xl rounded-2xl overflow-hidden transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer">
+          <Link to="/contact" key={index} className="flex justify-center">
+            <div className="w-[230px] bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] rounded-xl shadow-md overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <img
                 src={item.logo}
                 alt={item.name}
-                className="w-full h-48 object-contain p-4 bg-gray-100"
+                className="w-full h-28 object-contain p-3 bg-gray-100"
               />
-              <div className="p-5 text-center">
-                <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
-                <p className="mt-3 text-gray-600">
-                  <strong className="text-gray-800">Investment:</strong> {item.investment}
+              <div className="p-3 text-center text-white">
+                <h3 className="text-base font-semibold">{item.name}</h3>
+                <p className="mt-2 text-sm">
+                  <span className="font-medium">Investment:</span> {item.investment}
                 </p>
-                <p className="text-gray-600">
-                  <strong className="text-gray-800">Area:</strong> {item.sqft}
+                <p className="text-sm">
+                  <span className="font-medium">Area:</span> {item.sqft}
                 </p>
               </div>
             </div>
