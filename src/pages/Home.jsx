@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Team from "../components/Team";
@@ -9,17 +8,6 @@ import About from "./About";
 import IndustryGrid from "./IndustryGrid";
 
 const Home = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.state?.scrollTo === "about") {
-      const el = document.getElementById("about");
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
-
   return (
     <div>
       <Hero />

@@ -4,6 +4,7 @@ import kovai from "../assets/images/Kovai.png";
 import lnc from "../assets/images/LNC.jpg";
 import TTP from "../assets/images/Teatalk.jpg";
 import TTE from "../assets/images/TeaTalkExpress.jpg";
+import KOKO from "../assets/images/kokoking.jpg"
 import restaurant from "../assets/images/restaurant.jpg";
 
 const franchises = [
@@ -30,6 +31,12 @@ const franchises = [
     logo: TTE,
     investment: "₹5 Lakhs",
     sqft: "200-250 sqft",
+  },
+  {
+    name: "Kokoking",
+    logo: KOKO,
+    investment: "₹8Lakhs",
+    sqft: "150 sqft",
   },
 ];
 

@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/Franchisify.in-logo-white-png-(2).png"; // Adjust path as needed
+import Logo from "../assets/images/Franchisify.in-logo-white-png-(2).png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Change navbar background on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] shadow-md" : "bg-transparent"
+        scrolled
+          ? "bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -35,14 +29,17 @@ const Navigation = () => {
           <img
             src={Logo}
             alt="Logo"
-            className="h-14 sm:h-16 md:h-16 transition-transform duration-300 hover:scale-110 font-serif"
+            className="h-14 sm:h-16 md:h-16 max-w-full object-contain transition-transform duration-300 hover:scale-110"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-10 text-lg font-semibold items-center">
           <li>
-            <Link to="/" className="text-white hover:text-orange-400 transition-all duration-200">
+            <Link
+              to="/"
+              className="text-white hover:text-orange-400 transition-all duration-200"
+            >
               Home
             </Link>
           </li>
@@ -52,26 +49,33 @@ const Navigation = () => {
               className="text-white hover:text-orange-400 transition-all duration-200"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("about")?.scrollIntoView({
-                  behavior: "smooth",
-                });
+                document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               About
             </a>
           </li>
           <li>
-            <Link to="/deservices" className="text-white hover:text-orange-400 transition-all duration-200">
+            <Link
+              to="/deservices"
+              className="text-white hover:text-orange-400 transition-all duration-200"
+            >
               Services
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="text-white hover:text-orange-400 transition-all duration-200">
+            <Link
+              to="/contact"
+              className="text-white hover:text-orange-400 transition-all duration-200"
+            >
               Career
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="text-white hover:text-orange-400 transition-all duration-200">
+            <Link
+              to="/contact"
+              className="text-white hover:text-orange-400 transition-all duration-200"
+            >
               Contact
             </Link>
           </li>
@@ -113,7 +117,7 @@ const Navigation = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } md:hidden bg-[#1e293b] transition-all duration-300 ease-in-out font-serif w-full`}
+        } md:hidden w-full bg-[#1e293b] transition-all duration-300 ease-in-out font-serif`}
       >
         <div className="px-8 py-6 space-y-5 text-center text-lg font-semibold">
           <Link
@@ -134,9 +138,7 @@ const Navigation = () => {
             href="#about"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("about")?.scrollIntoView({
-                behavior: "smooth",
-              });
+              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
               setIsOpen(false);
             }}
             className="block text-white hover:text-orange-400 transition"
