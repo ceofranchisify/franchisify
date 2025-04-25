@@ -4,8 +4,9 @@ import kovai from "../assets/images/Kovai.png";
 import lnc from "../assets/images/LNC.jpg";
 import TTP from "../assets/images/Teatalk.jpg";
 import TTE from "../assets/images/TeaTalkExpress.jpg";
-import KOKO from "../assets/images/kokoking.jpg"
+import KOKO from "../assets/images/kokoking.jpg";
 import restaurant from "../assets/images/restaurant.jpg";
+import CE from "../assets/images/crunchys.jpg";
 
 const franchises = [
   {
@@ -35,8 +36,26 @@ const franchises = [
   {
     name: "Kokoking",
     logo: KOKO,
-    investment: "₹8Lakhs",
+    investment: "₹8 Lakhs",
     sqft: "150 sqft",
+  },
+  {
+    name: "Crunchy's Express",
+    logo: CE,
+    investment: "₹12 Lakhs",
+    sqft: "200 sqft",
+  },
+  {
+    name: "Crunchy's",
+    logo: CE,
+    investment: "₹26.5 Lakhs",
+    sqft: "600 sqft",
+  },
+  {
+    name: "Crunchy's Master Franchise",
+    logo: CE,
+    investment: "₹50-75 Lakhs",
+    sqft: "200 sqft",
   },
 ];
 
@@ -46,11 +65,9 @@ const Restaurant = () => {
       {/* Hero Section */}
       <div
         className="h-80 bg-cover bg-center relative flex items-center justify-center"
-        style={{
-          backgroundImage: `url(${restaurant})`,
-        }}
+        style={{ backgroundImage: `url(${restaurant})` }}
       >
-        <div className="absolute inset-0 bg-black/20 "></div>
+        <div className="absolute inset-0 bg-black/40" />
         <h1 className="relative text-3xl md:text-4xl text-white font-bold drop-shadow-lg">
           Restaurant Franchises
         </h1>
@@ -58,29 +75,38 @@ const Restaurant = () => {
 
       {/* Breadcrumb */}
       <div className="p-4 bg-white shadow text-gray-700 text-sm">
-        <Link to="/" className="hover:text-orange-500 font-medium">Home</Link>
+        <Link to="/" className="hover:text-orange-500 font-medium">
+          Home
+        </Link>
         <span className="mx-1"> / </span>
         <span className="font-semibold">Restaurant</span>
       </div>
 
       {/* Franchise Cards */}
-      <div className="p-6 grid gap-4 justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="px-4 py-8 grid gap-6 justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {franchises.map((item, index) => (
           <Link to="/contact" key={index} className="flex justify-center">
-            <div className="w-[230px] bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] rounded-xl shadow-md overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl cursor-pointer">
-              <img
-                src={item.logo}
-                alt={item.name}
-                className="w-full h-28 object-contain p-3 bg-white"
-              />
-              <div className="p-3 text-center text-white">
-                <h3 className="text-base font-semibold">{item.name}</h3>
-                <p className="mt-2 text-sm">
-                  <span className="font-medium">Investment:</span> {item.investment}
-                </p>
-                <p className="text-sm">
-                  <span className="font-medium">Area:</span> {item.sqft}
-                </p>
+            <div className="relative group w-[230px] rounded-xl cursor-pointer">
+              {/* Animated Gradient Border */}
+              <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 animate-border-spin group-hover:scale-105 transition-transform duration-300 z-0" />
+
+              {/* Card Content */}
+              <div className="relative z-10 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] rounded-xl shadow-md overflow-hidden">
+                <img
+                  src={item.logo}
+                  alt={item.name}
+                  className="w-full h-28 object-contain p-3 bg-white"
+                />
+                <div className="p-3 text-center text-white">
+                  <h3 className="text-base font-semibold">{item.name}</h3>
+                  <p className="mt-2 text-sm">
+                    <span className="font-medium">Investment:</span>{" "}
+                    {item.investment}
+                  </p>
+                  <p className="text-sm">
+                    <span className="font-medium">Area:</span> {item.sqft}
+                  </p>
+                </div>
               </div>
             </div>
           </Link>

@@ -46,20 +46,26 @@ const Education = () => {
       <div className="p-6 grid gap-4 justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {franchises.map((item, index) => (
           <Link to="/contact" key={index} className="flex justify-center">
-            <div className="w-[230px] bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] rounded-xl shadow-md overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl cursor-pointer">
-              <img
-                src={item.logo}
-                alt={item.name}
-                className="w-full h-28 object-contain p-3 bg-gray-100"
-              />
-              <div className="p-3 text-center text-white">
-                <h3 className="text-base font-semibold">{item.name}</h3>
-                <p className="mt-2 text-sm">
-                  <span className="font-medium">Investment:</span> {item.investment}
-                </p>
-                <p className="text-sm">
-                  <span className="font-medium">Area:</span> {item.sqft}
-                </p>
+            <div className="relative group w-[230px] rounded-xl cursor-pointer">
+              {/* Animated Border */}
+              <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 animate-border-spin group-hover:scale-105 transition-transform duration-300 z-0" />
+              
+              {/* Card Content */}
+              <div className="relative z-10 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] rounded-xl shadow-md overflow-hidden">
+                <img
+                  src={item.logo}
+                  alt={item.name}
+                  className="w-full h-28 object-contain p-3 bg-white"
+                />
+                <div className="p-3 text-center text-white">
+                  <h3 className="text-base font-semibold">{item.name}</h3>
+                  <p className="mt-2 text-sm">
+                    <span className="font-medium">Investment:</span> {item.investment}
+                  </p>
+                  <p className="text-sm">
+                    <span className="font-medium">Area:</span> {item.sqft}
+                  </p>
+                </div>
               </div>
             </div>
           </Link>
