@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DrLeakage from "../assets/images/dr leakage.jpg"
+import DrLeakage from "../assets/images/dr leakage.jpg";
 import constructionfranchise from "../assets/images/construction.jpg";
 
 const franchises = [
@@ -12,7 +12,7 @@ const franchises = [
   },
 ];
 
-const Retail = () => {
+const Construction = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       {/* Hero Section */}
@@ -32,7 +32,7 @@ const Retail = () => {
       <div className="p-4 bg-white shadow text-gray-700 text-sm">
         <Link to="/" className="hover:text-orange-500 font-medium">Home</Link>
         <span className="mx-1"> / </span>
-        <span className="font-semibold">Retail</span>
+        <span className="font-semibold">Construction</span>
       </div>
 
       {/* Franchise Cards */}
@@ -69,4 +69,4 @@ const Retail = () => {
   );
 };
 
-export default Retail;
+export default Construction;

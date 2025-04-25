@@ -7,12 +7,13 @@ const industries = [
   { icon: <FaUtensils size={50} />, label: "Restaurant", route: "/restaurant" },
   { icon: <FaBook size={50} />, label: "Education", route: "/education" },
   { icon: <FaStore size={50} />, label: "Retail", route: "/retail" },
+  { icon: <FaHardHat size={50} />, label: "Construction", route: "/construction" },
   { icon: <FaWalking size={50} />, label: "Gym" },
   { icon: <FaSpa size={50} />, label: "Wellness" },
   { icon: <FaGem size={50} />, label: "Jewelry" },
   { icon: <FaBicycle size={50} />, label: "Sports" },
   { icon: <FaCar size={50} />, label: "Auto" },
-  { icon: <FaHardHat size={50} />, label: "Construction", route: "/construction" }, // <-- New item
+  // <-- New item
 ];
 
 const IndustryGrid = () => {

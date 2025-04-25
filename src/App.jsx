@@ -11,6 +11,7 @@ import Restaurant from "./pages/Restaurant";
 import Retail from "./pages/Retail";
 import PrivacyPolicy from "./pages/privacypolicy";
 import TermsAndConditions from "./pages/TermsandConditions";
+import Construction from "./pages/construction";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/education" element={<Education />} />
         <Route path="/retail" element={<Retail />} />
+        <Route path="/construction" element={<Construction/>} />
         <Route path="/restaurant" element={<Restaurant />} />
         <Route path="/privacy" element={<PrivacyPolicy />}/>
         <Route path="/terms" element={<TermsAndConditions />}/>
