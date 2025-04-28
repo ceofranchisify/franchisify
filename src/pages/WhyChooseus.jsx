@@ -29,19 +29,20 @@ const highlights = [
 const WhyFranchisify = () => {
   return (
     <section
-      className="relative text-white py-24 px-6 overflow-hidden bg-cover bg-center"
+      className="relative min-h-screen flex items-center justify-center text-white py-20 px-6 bg-cover bg-center"
       style={{
         backgroundImage: `url(${why})`,
-        backgroundAttachment: "fixed", // Adds smooth parallax effect
+        backgroundAttachment: "fixed", // Smooth parallax
       }}
     >
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/50 z-0"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-0"></div>
 
-      <div className="relative max-w-6xl mx-auto text-center z-10">
-        {/* Section Title */}
+      {/* Content */}
+      <div className="relative max-w-7xl w-full mx-auto text-center z-10">
+        {/* Title */}
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold text-white tracking-wide"
+          className="text-3xl md:text-5xl font-extrabold leading-tight"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -49,8 +50,9 @@ const WhyFranchisify = () => {
           Why <span className="text-[#fbbf24]">Franchisify?</span>
         </motion.h2>
 
+        {/* Subtext */}
         <motion.p
-          className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
+          className="mt-4 text-base md:text-lg text-gray-300 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -59,19 +61,19 @@ const WhyFranchisify = () => {
         </motion.p>
 
         {/* Highlights Grid */}
-        <div className="grid gap-10 mt-12 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-16 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
           {highlights.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white/5 p-8 rounded-3xl shadow-xl border border-white/20 transition duration-500 hover:scale-105 hover:shadow-neon backdrop-blur-lg flex flex-col items-center text-center"
+              className="bg-white/5 p-8 rounded-3xl border border-white/20 backdrop-blur-lg shadow-lg hover:scale-105 hover:shadow-neon transition-all duration-500 flex flex-col items-center text-center"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="mb-4" aria-hidden="true">{item.icon}</div>
-              <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-4 text-gray-400 leading-relaxed">{item.description}</p>
+              <div className="mb-4">{item.icon}</div>
+              <h3 className="text-xl md:text-2xl font-bold">{item.title}</h3>
+              <p className="mt-4 text-gray-400 text-sm md:text-base leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>

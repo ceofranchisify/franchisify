@@ -44,18 +44,21 @@ const Services = () => {
   };
 
   return (
-    <section className="relative bg-white text-white py-24 px-6">
-      <div className="relative max-w-7xl mx-auto text-center">
+    <section className="relative bg-white py-16 px-4 sm:px-6 md:px-10 lg:px-12">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* Section Heading */}
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold text-black"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black leading-tight"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Our <span className="text-[#fbbf24]">Services</span>
         </motion.h2>
+
+        {/* Section Description */}
         <motion.p
-          className="mt-4 text-lg md:text-xl text-black max-w-3xl mx-auto"
+          className="mt-4 text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -63,22 +66,32 @@ const Services = () => {
           End-to-end solutions designed to fuel the success and scalability of your franchise.
         </motion.p>
 
-        <div className="grid gap-10 mt-12 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Service Cards */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] p-10 rounded-3xl shadow-lg border border-white/20 backdrop-blur-lg transform transition duration-500 hover:scale-105 hover:bg-white/20"
+              className="flex flex-col items-center bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] p-6 sm:p-8 rounded-3xl shadow-xl border border-white/20 backdrop-blur-lg hover:scale-105 transition-transform duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="text-6xl mb-6 mx-auto flex justify-center">{service.icon}</div>
-              <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
-              <p className="mt-4 text-gray-300 leading-relaxed">{service.description}</p>
+              {/* Icon */}
+              <div className="text-5xl sm:text-6xl mb-5">{service.icon}</div>
+
+              {/* Service Title */}
+              <h3 className="text-xl sm:text-2xl font-semibold text-white text-center">{service.title}</h3>
+
+              {/* Service Description */}
+              <p className="mt-3 text-gray-300 text-sm sm:text-base text-center leading-relaxed">
+                {service.description}
+              </p>
+
+              {/* Learn More Button */}
               <button
                 onClick={() => handleLearnMore(service.id)}
-                className="mt-6 px-6 py-3 bg-[#fbbf24] text-white font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-lg"
+                className="mt-6 px-5 py-3 bg-[#fbbf24] text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
                 Learn More
               </button>

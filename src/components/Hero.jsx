@@ -5,7 +5,7 @@ import heroVideo from "../assets/video/vid1.mp4";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-[100vh] w-full overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -17,30 +17,30 @@ const HeroSection = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-black/45 bg-opacity-60 z-10" />
 
-      {/* Background Circles */}
-      <motion.div 
-        className="hidden sm:block absolute top-10 left-10 w-28 sm:w-40 h-28 sm:h-40 bg-blue-500 opacity-20 rounded-full blur-3xl z-20"
+      {/* Animated Background Circles */}
+      <motion.div
+        className="hidden sm:block absolute top-10 left-10 w-28 sm:w-36 md:w-40 h-28 sm:h-36 md:h-40 bg-blue-500 opacity-20 rounded-full blur-3xl z-20"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ repeat: Infinity, duration: 4 }}
       />
-      <motion.div 
-        className="hidden sm:block absolute bottom-10 right-10 w-24 sm:w-32 h-24 sm:h-32 bg-indigo-500 opacity-20 rounded-full blur-3xl z-20"
+      <motion.div
+        className="hidden sm:block absolute bottom-10 right-10 w-24 sm:w-32 md:w-36 h-24 sm:h-32 md:h-36 bg-indigo-500 opacity-20 rounded-full blur-3xl z-20"
         animate={{ scale: [1, 1.3, 1] }}
         transition={{ repeat: Infinity, duration: 5 }}
       />
 
-      {/* Foreground Content - Centered */}
-      <div className="relative z-30 flex items-center justify-center h-full px-4 sm:px-8 text-center">
+      {/* Foreground Content */}
+      <div className="relative z-30 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="max-w-4xl"
+          className="max-w-4xl w-full"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fbbf24] to-[#e0e0e0]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-gray-200">
               Revolutionizing
             </span>{" "}
             the Realm of Franchising
@@ -57,7 +57,7 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-[#fbbf24] text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-base sm:text-lg shadow-md transition duration-300"
+                className="border-2 border-yellow-400 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-base sm:text-lg shadow-lg transition duration-300"
               >
                 Learn More
               </motion.button>
@@ -66,7 +66,7 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-[#ff9800] to-[#ff5722] text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-base sm:text-lg shadow-md hover:bg-[#fbbf24] hover:text-black transition duration-300"
+                className="bg-gradient-to-r from-orange-500 to-orange-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-base sm:text-lg shadow-lg hover:bg-yellow-400 hover:text-black transition duration-300"
               >
                 Get Started
               </motion.button>

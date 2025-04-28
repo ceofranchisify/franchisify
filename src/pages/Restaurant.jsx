@@ -7,7 +7,10 @@ import TTE from "../assets/images/TeaTalkExpress.jpg";
 import KOKO from "../assets/images/kokoking.jpg";
 import restaurant from "../assets/images/restaurant.jpg";
 import CE from "../assets/images/crunchys.jpg";
-
+import stevia from "../assets/images/stevia logo-1.png";
+import Sizzlly from "../assets/images/Sizzly Snacks Logo Kit_page-0001.jpg";
+import BBB from "../assets/images/Big Bang Bajji Logo Kit_page-0001.jpg";
+import foodoor from "../assets/images/foodoor.jpg"
 const franchises = [
   {
     name: "Kovai Rawuther Biriyani",
@@ -57,6 +60,30 @@ const franchises = [
     investment: "₹50-75 Lakhs",
     sqft: "200 sqft",
   },
+  {
+    name: "Stevia Delights",
+    logo: stevia,
+    investment: "₹25 Lakhs",
+    sqft: "LWH: 4*2*7",
+  },
+  {
+    name: "Sizzlly Snacks",
+    logo: Sizzlly,
+    investment: "Shop-in-Shop: ₹3.5 Lakhs | Street Model: ₹4 Lakhs",
+    sqft: "LWH: 6*3*8",
+  },
+  {
+    name: "Big Bang Bajji",
+    logo: BBB,
+    investment: "Shop-in-Shop: ₹3.5 Lakhs | Street Model: ₹4 Lakhs",
+    sqft: "LWH: 6*3*8",
+  },
+  {
+    name: "Foodoor",
+    logo: foodoor,
+    investment: "₹1 Lakhs",
+    
+  },
 ];
 
 const Restaurant = () => {
@@ -87,8 +114,8 @@ const Restaurant = () => {
         {franchises.map((item, index) => (
           <Link to="/contact" key={index} className="flex justify-center">
             <div className="relative group w-[230px] rounded-xl cursor-pointer">
-              {/* Animated Gradient Border */}
-              <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 animate-border-spin group-hover:scale-105 transition-transform duration-300 z-0" />
+              {/* Card Border */}
+              <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 group-hover:scale-105 transition-transform duration-300 z-0" />
 
               {/* Card Content */}
               <div className="relative z-10 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] rounded-xl shadow-md overflow-hidden">
@@ -99,13 +126,16 @@ const Restaurant = () => {
                 />
                 <div className="p-3 text-center text-white">
                   <h3 className="text-base font-semibold">{item.name}</h3>
-                  <p className="mt-2 text-sm">
-                    <span className="font-medium">Investment:</span>{" "}
-                    {item.investment}
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-medium">Area:</span> {item.sqft}
-                  </p>
+                  {item.investment && (
+                    <p className="mt-2 text-sm">
+                      <span className="font-medium">Investment:</span> {item.investment}
+                    </p>
+                  )}
+                  {item.sqft && (
+                    <p className="text-sm">
+                      <span className="font-medium">Area:</span> {item.sqft}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
