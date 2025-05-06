@@ -1,6 +1,6 @@
 // src/components/IndustryGrid.jsx
 import React from "react";
-import { FaStore, FaWalking, FaSpa, FaGem, FaUtensils, FaBicycle, FaBook, FaCar, FaHardHat } from "react-icons/fa";
+import { FaStore, FaWalking, FaSpa, FaGem, FaUtensils, FaBicycle, FaBook, FaCar, FaHardHat,FaBullhorn } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const industries = [
@@ -13,6 +13,7 @@ const industries = [
   { icon: <FaGem size={50} />, label: "Jewellery" },
   { icon: <FaBicycle size={50} />, label: "Sports" },
   { icon: <FaCar size={50} />, label: "Auto" },
+  { icon: <FaBullhorn size={50} />, label: "Digital Marketing", route: "/digital" },
 ];
 
 const IndustryGrid = () => {

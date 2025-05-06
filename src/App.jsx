@@ -13,6 +13,7 @@ import PrivacyPolicy from "./pages/privacypolicy";
 import TermsAndConditions from "./pages/TermsandConditions";
 import Construction from "./pages/construction";
 import Wellness from "./pages/Wellness";
+import Digital from "./pages/Digital";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/construction" element={<Construction/>} />
         <Route path="/wellness" element={<Wellness/>}/>
         <Route path="/restaurant" element={<Restaurant />} />
+        <Route path="/digital" element={<Digital/>} />
         <Route path="/privacy" element={<PrivacyPolicy />}/>
         <Route path="/terms" element={<TermsAndConditions />}/>
       </Routes>

@@ -12,6 +12,7 @@ import Sizzlly from "../assets/images/Sizzly Snacks Logo Kit_page-0001.jpg";
 import BBB from "../assets/images/Big Bang Bajji Logo Kit_page-0001.jpg";
 import foodoor from "../assets/images/foodoor.jpg";
 import so from "../assets/images/spized.jpg";
+import hh from "../assets/images/hungerheist.png"
 const franchises = [
   {
     name: "Kovai Rawuther Biriyani",
@@ -90,6 +91,13 @@ const franchises = [
     logo: so,
     investment: "Silver :₹8 Lakhs|  Gold :₹14 Lakhs | Diamond:₹26 Lakhs  ", 
   },
+  {
+    name: "Hunger Heist",
+    logo: hh,
+    investment: "17 Lakhs ",
+    sqft:"400 - 700 sqft"
+  },
+
 ];
 
 const Restaurant = () => {

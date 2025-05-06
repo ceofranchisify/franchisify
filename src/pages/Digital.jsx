@@ -1,37 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import zearash from "../assets/images/Zerash.jpg";
-import retailfranchise from "../assets/images/retail.jpg";
-import GirLush from "../assets/images/girllush.png"
+import Oxlo from "../assets/images/oxlo.jpg";
+import digitalfranchise from "../assets/images/digital.jpg";
+
+
 
 const franchises = [
   {
-    name: "Zerash",
-    logo: zearash,
-    investment: "₹30 - ₹50 Lakhs",
-    sqft: "1000 - 2000 sq.ft",
+    name: "Oxlo Ads",
+    logo: Oxlo,
+    investment: "₹3.5 Lakhs",
+    
   },
-  {
-    name: "GirLush",
-    logo: GirLush,
-    investment: "₹33 Lakhs",
-    sqft: "250 - 350 Sqft",
-  },
+  
 ];
 
-const Retail = () => {
+const Digital = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       {/* Hero Section */}
       <div
-        className="h-80 bg-cover bg-center relative flex items-center justify-center"
+        className="h-80 bg-cover backdrop-blur-3xl bg-center relative flex items-center justify-center"
         style={{
-          backgroundImage: `url(${retailfranchise})`,
+          backgroundImage: `url(${digitalfranchise})`,
         }}
       >
         <div className="absolute inset-0 bg-black/20 "></div>
         <h1 className="relative text-3xl md:text-4xl text-white font-bold font-serif drop-shadow-lg">
-          Retail Franchises
+          Digital Marketing Franchises
         </h1>
       </div>
 
@@ -39,7 +35,7 @@ const Retail = () => {
       <div className="p-4 bg-white shadow text-gray-700 text-sm">
         <Link to="/" className="hover:text-orange-500 font-medium">Home</Link>
         <span className="mx-1"> / </span>
-        <span className="font-semibold">Retail</span>
+        <span className="font-semibold">Digital Marketing</span>
       </div>
 
       {/* Franchise Cards */}
@@ -76,4 +72,4 @@ const Retail = () => {
   );
 };
 
-export default Retail;
+export default Digital;
