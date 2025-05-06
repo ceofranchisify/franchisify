@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { 
   FaMapMarkerAlt, FaPhone, FaEnvelope, 
-  FaFacebook, FaYoutube, FaInstagram, FaLinkedin, FaQuora 
+  FaFacebook, FaYoutube, FaInstagram, FaLinkedin,
 } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 import logo from "../assets/images/Franchisify.in 2 (3).jpg";  // Make sure your path is correct
@@ -59,9 +59,6 @@ const Footer = () => {
             </a>
             <a href="https://www.linkedin.com/company/franchisify-in/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
               <FaLinkedin />
-            </a>
-            <a href="https://www.quora.com/profile/Franchisify" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-              <FaQuora />
             </a>
           </div>
         </div>
