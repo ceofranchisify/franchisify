@@ -13,6 +13,7 @@ import BBB from "../assets/images/Big Bang Bajji Logo Kit_page-0001.jpg";
 import foodoor from "../assets/images/foodoor.jpg";
 import so from "../assets/images/spized.jpg";
 import hh from "../assets/images/hungerheist.png"
+import stonedmonkey from "../assets/images/stonedmonkey.png"
 const franchises = [
   {
     name: "Kovai Rawuther Biriyani",
@@ -96,6 +97,12 @@ const franchises = [
     logo: hh,
     investment: "17 Lakhs ",
     sqft:"400 - 700 sqft"
+  },
+  {
+    name: "Stoned Monkey",
+    logo: stonedmonkey,
+    investment: "Inv : Normal franchise 26L | Master franchise - 50L ",
+    sqft:"400 to 600 sqft"
   },
 
 ];
