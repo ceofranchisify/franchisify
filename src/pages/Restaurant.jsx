@@ -101,7 +101,7 @@ const franchises = [
   {
     name: "Stoned Monkey",
     logo: stonedmonkey,
-    investment: "Inv : Normal franchise 26L | Master franchise - 50L ",
+    investment: "Normal franchise 26L | Master franchise - 50L ",
     sqft:"400 to 600 sqft"
   },
 
