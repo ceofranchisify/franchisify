@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import velby from "../assets/images/Velby logo.png";
 import wellness from "../assets/images/wellness.jpg";
@@ -7,44 +7,23 @@ const franchises = [
   {
     name: "Velby",
     logo: velby,
-    tiers: [
-      {
-        title: "Tier 1 (Metro)",
-        investment: "₹33L - ₹38L",
-        area: "1000 sq ft+",
-      },
-      {
-        title: "Tier 2 (Major)",
-        investment: "₹23L - ₹28L",
-        area: "800 sq ft+",
-      },
-      {
-        title: "Tier 3 (Growing)",
-        investment: "₹15L - ₹20L",
-        area: "500 sq ft+",
-      },
-      {
-        title: "Tier 4 (Small)",
-        investment: "₹12L - ₹17L",
-        area: "300 sq ft+",
-      },
-    ],
-    masterFranchise: [
-      {
-        title: "State level",
-        investment: "₹70L - ₹95L",
-        area: "1000 sq ft",
-      },
-      {
-        title: "Zonal level",
-        investment: "₹1.75Cr - ₹1.96Cr",
-        area: "1000 sq ft",
-      },
-    ],
+    rating: "4.5", // Added rating as an example
+    description:
+      "At Velby, we blend innovation with care to build a future-ready healthcare system. Our AI-powered platform delivers preventive care, smart diagnostics, and access to global healthcare—all under one digital umbrella. Join us as a Velby Franchise Partner and shape a purposeful business in a fast-growing sector",
+    investment: "₹2.5L",
+    model: "Retail & Online",
+    origin: "Kozhikode kerala",
+    year: "2024",
   },
 ];
 
 const Wellness = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleDescription = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <div className="bg-white min-h-screen font-sans">
       {/* Hero Section */}
@@ -66,51 +45,86 @@ const Wellness = () => {
           Home
         </Link>
         <span className="mx-1"> / </span>
-        <span className="font-semibold">Retail</span>
+        <span className="font-semibold">Wellness</span>
       </div>
 
       {/* Franchise Cards */}
-      <div className="p-6 grid gap-4 justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="px-4 py-8 space-y-6 max-w-6xl mx-auto">
         {franchises.map((item, index) => (
-          <Link to="/contact" key={index} className="flex justify-center">
-            <div className="relative group w-[260px] rounded-xl cursor-pointer">
-              {/* Animated Border */}
-              <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 animate-border-spin group-hover:scale-105 transition-transform duration-300 z-0" />
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-lg border flex flex-col md:flex-row items-start md:items-center gap-4 p-4 relative"
+          >
+            {/* Logo */}
+            <img
+              src={item.logo}
+              alt={item.name}
+              className="w-24 h-24 object-contain rounded border bg-white"
+            />
 
-              {/* Card Content */}
-              <div className="relative z-10 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] rounded-xl shadow-md overflow-hidden">
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className="w-full h-28 object-contain p-3 bg-white"
-                />
-                <div className="p-3 text-center text-white">
-                  <h3 className="text-base font-semibold mb-2">{item.name}</h3>
-
-                  {/* Show Tier Information */}
-                  {item.tiers.map((tier, idx) => (
-                    <div key={idx} className="text-xs mb-1">
-                      <p className="font-semibold">{tier.title}</p>
-                      <p>Investment: {tier.investment}</p>
-                      <p>Area: {tier.area}</p>
-                    </div>
-                  ))}
-
-                  {/* Show Master Franchise Info */}
-                  <div className="mt-2">
-                    <p className="font-semibold text-sm underline mb-1">Master Franchise</p>
-                    {item.masterFranchise.map((master, idx) => (
-                      <div key={idx} className="text-xs">
-                        <p className="font-semibold">{master.title}</p>
-                        <p>Investment: {master.investment}</p>
-                        <p>Area: {master.area}</p>
-                      </div>
-                    ))}
-                  </div>
+            {/* Info */}
+            <div className="flex-1 space-y-1 text-sm text-gray-700">
+              <h2 className="text-lg font-semibold text-gray-900">{item.name}</h2>
+              <div className="flex flex-wrap gap-2 items-center text-xs">
+                <span className="bg-green-100 text-green-700 px-2 py-1 rounded">
+                  {item.rating} Google Ratings
+                </span>
+                <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                  Verified Brand
+                </span>
+              </div>
+              <p className="mt-2">{item.description?.slice(0, 100)}...</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-3 text-gray-600 text-xs">
+                <div>
+                  <strong>Investment:</strong> {item.investment}
+                </div>
+                <div>
+                  <strong>Space:</strong> {item.sqft}
+                </div>
+                <div>
+                  <strong>Model:</strong> {item.model}
+                </div>
+                <div>
+                  <strong>Franchisees:</strong> {item.franchisees}
+                </div>
+                <div>
+                  <strong>Brand Origin:</strong> {item.origin}
+                </div>
+                <div>
+                  <strong>Est. Year:</strong> {item.year}
                 </div>
               </div>
+
+              {/* Toggle Description */}
+              {expandedIndex === index && (
+                <div className="bg-gray-100 p-3 rounded mt-2 text-xs">
+                  <p>{item.description}</p>
+                  <button
+                    onClick={() => toggleDescription(index)}
+                    className="text-red-500 text-xs mt-2 underline"
+                  >
+                    Close
+                  </button>
+                </div>
+              )}
             </div>
-          </Link>
+
+            {/* CTA */}
+            <div className="flex flex-col items-end justify-center ml-auto">
+              <button
+                onClick={() => toggleDescription(index)}
+                className="text-sm text-blue-600 border border-blue-500 px-4 py-1 rounded hover:bg-blue-50"
+              >
+                {expandedIndex === index ? "Hide Details" : "View Details"}
+              </button>
+              <Link
+                to="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-1 mt-2 rounded"
+              >
+                Contact Brand
+              </Link>
+            </div>
+          </div>
         ))}
       </div>
     </div>

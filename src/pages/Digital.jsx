@@ -3,16 +3,19 @@ import { Link } from "react-router-dom";
 import Oxlo from "../assets/images/oxlo.jpg";
 import digitalfranchise from "../assets/images/digital.jpg";
 
-
-
 const franchises = [
   {
     name: "Oxlo Ads",
     logo: Oxlo,
-    investment: "₹3.5 Lakhs",
-    
+    investment: "₹2.5 Lakhs",
+    sqft: "150-200 sq ft",
+    model: "Digital Marketing",
+    franchisees: "0",
+    origin: "THIRUVANATHAPURAM",
+    year: "2023",
+    description:
+      "We have a large pool of talented professionals with profound expertise in improving your communication strategy through unique and effective solutions We make your communication strategy more effective and productive. It helps you explore unmatched opportunities by engaging your target audiences. Digital signage, also known as electronic signage, is used to communicate with target audiences. Digital networks typically feature independently addressable screens, kiosks, video walls and LED walls. Digital media benefits location owners and advertisers alike in being able to engage customers and/or audiences and extend the reach and effectiveness of marketing messages",
   },
-  
 ];
 
 const Digital = () => {
@@ -33,39 +36,73 @@ const Digital = () => {
 
       {/* Breadcrumb */}
       <div className="p-4 bg-white shadow text-gray-700 text-sm">
-        <Link to="/" className="hover:text-orange-500 font-medium">Home</Link>
+        <Link to="/" className="hover:text-orange-500 font-medium">
+          Home
+        </Link>
         <span className="mx-1"> / </span>
         <span className="font-semibold">Digital Marketing</span>
       </div>
 
       {/* Franchise Cards */}
-      <div className="p-6 grid gap-4 justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="px-4 py-8 space-y-6 max-w-6xl mx-auto">
         {franchises.map((item, index) => (
-          <Link to="/contact" key={index} className="flex justify-center">
-            <div className="relative group w-[230px] rounded-xl cursor-pointer">
-              {/* Animated Border */}
-              <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 animate-border-spin group-hover:scale-105 transition-transform duration-300 z-0" />
-              
-              {/* Card Content */}
-              <div className="relative z-10 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] rounded-xl shadow-md overflow-hidden">
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className="w-full h-28 object-contain p-3 bg-white"
-                />
-                <div className="p-3 text-center text-white">
-                  <h3 className="text-base font-semibold">{item.name}</h3>
-                  <p className="mt-2 text-sm">
-                    <span className="font-medium">Investment:</span>{" "}
-                    {item.investment}
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-medium">Area:</span> {item.sqft}
-                  </p>
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-lg border flex flex-col md:flex-row items-start md:items-center gap-4 p-4 relative"
+          >
+            {/* Logo */}
+            <img
+              src={item.logo}
+              alt={item.name}
+              className="w-24 h-24 object-contain rounded border bg-white"
+            />
+
+            {/* Info */}
+            <div className="flex-1 space-y-1 text-sm text-gray-700">
+              <h2 className="text-lg font-semibold text-gray-900">{item.name}</h2>
+              <div className="flex flex-wrap gap-2 items-center text-xs">
+                <span className="bg-green-100 text-green-700 px-2 py-1 rounded">
+                  Verified Brand
+                </span>
+              </div>
+              <p className="mt-2">{item.description?.slice(0, 100)}...</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-3 text-gray-600 text-xs">
+                <div>
+                  <strong>Investment:</strong> {item.investment}
+                </div>
+                <div>
+                  <strong>Space:</strong> {item.sqft}
+                </div>
+                <div>
+                  <strong>Model:</strong> {item.model}
+                </div>
+                <div>
+                  <strong>Franchisees:</strong> {item.franchisees}
+                </div>
+                <div>
+                  <strong>Brand Origin:</strong> {item.origin}
+                </div>
+                <div>
+                  <strong>Est. Year:</strong> {item.year}
                 </div>
               </div>
+
+              {/* Toggle Description */}
+              <div className="bg-gray-100 p-3 rounded mt-2 text-xs">
+                <p>{item.description}</p>
+              </div>
             </div>
-          </Link>
+
+            {/* CTA */}
+            <div className="flex flex-col items-end justify-center ml-auto">
+              <Link
+                to="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-1 mt-2 rounded"
+              >
+                Contact Brand
+              </Link>
+            </div>
+          </div>
         ))}
       </div>
     </div>
