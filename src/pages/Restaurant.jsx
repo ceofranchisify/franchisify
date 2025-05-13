@@ -50,7 +50,7 @@ const franchises = [
     origin: "Mumbai",
     year: 2018,
     model: "FOFO",
-    franchisees: 40,
+    franchisees: 1,
     description:
       "Premium cafe experience with budget-friendly investment and quick returns.",
   },
@@ -88,7 +88,7 @@ const franchises = [
     origin: "Bengaluru",
     year: 2017,
     model: "FOCO",
-    franchisees: 45,
+    franchisees: 23,
     description:
       "Fast food joint known for its express menu and vibrant ambiance.",
   },
@@ -101,7 +101,7 @@ const franchises = [
     origin: "Bengaluru",
     year: 2017,
     model: "FOCO",
-    franchisees: 20,
+    franchisees: 23,
     description:
       "Larger dine-in format with complete kitchen setup and family seating.",
   },
@@ -114,7 +114,7 @@ const franchises = [
     origin: "Bengaluru",
     year: 2017,
     model: "Master",
-    franchisees: 5,
+    franchisees: 1,
     description:
       "Master franchise opportunity for regional operations and expansion.",
   },

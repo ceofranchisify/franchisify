@@ -14,7 +14,7 @@ const franchises = [
     description: "Zerash offers a unique retail franchise experience with strong customer service.",
     franchisees: "15",
     origin: "Chennai",
-    year: "2025",
+    year: "2023",
   },
   {
     name: "GirLush",
