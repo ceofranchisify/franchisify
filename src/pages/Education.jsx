@@ -13,9 +13,9 @@ const franchises = [
     rating: "4.5",
     description: "A leading education franchise offering quality education in Bangalore.",
     model: "Single Unit",
-    franchisees: "50+",
+    franchisees: "2",
     origin: "India",
-    year: "2010",
+    year: "2024",
   },
   {
     name: "Career Cafe",
@@ -25,9 +25,9 @@ const franchises = [
     rating: "4.7",
     description: "A popular career counseling franchise with a strong network of experts.",
     model: "Master Franchise",
-    franchisees: "100+",
+    franchisees: "1",
     origin: "India",
-    year: "2015",
+    year: "2025",
   },
 ];
 

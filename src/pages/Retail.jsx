@@ -24,7 +24,7 @@ const franchises = [
     rating: "4.7",
     description: "At Girlush, we are more than just a beauty and makeup store; we are a movement dedicated to empowering women. We believe in growth, leadership, and inspiration, creating endless opportunities for success.TheGirlush story began with Latha, whose dream was ignited in her father’s humble grocery store. With unwavering support from her family, including her visionary daughter-in-laws, Dhanasree and Nandini Krishnan, this dream became a reality.Together, they became the soul of Girlush, shaping it into a trusted and growing brand with 9 successful outlets",
     model: "Master Franchise",
-    franchisees: "40+",
+    franchisees: "3",
     origin: "Coimbatore",
     year: "2025",
   },

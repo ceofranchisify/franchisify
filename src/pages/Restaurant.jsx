@@ -63,7 +63,7 @@ const franchises = [
     origin: "Mumbai",
     year: 2018,
     model: "FOFO",
-    franchisees: 60,
+    franchisees:4 ,
     description:
       "Compact tea outlet with high footfall in busy areas.",
   },
