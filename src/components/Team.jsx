@@ -40,7 +40,7 @@ const containerVariants = {
 
 const Team = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <motion.h2
@@ -55,7 +55,7 @@ const Team = () => {
 
         {/* Team Grid */}
         <motion.div
-          className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+          className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -66,10 +66,10 @@ const Team = () => {
               key={index}
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
-              className="bg-[#07293d] rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-6 transition-all duration-300"
+              className="bg-[#07293d] rounded-2xl shadow-md flex flex-col items-center p-4 md:p-5 min-w-0 transition-all duration-300"
             >
               {/* Profile Image */}
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 flex items-center justify-center">
                 <img
                   src={member.image}
                   alt={member.name}
