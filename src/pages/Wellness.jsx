@@ -7,13 +7,22 @@ const franchises = [
   {
     name: "Velby",
     logo: velby,
-    rating: "4.5", // Added rating as an example
+    rating: "4.5",
     description:
       "At Velby, we blend innovation with care to build a future-ready healthcare system. Our AI-powered platform delivers preventive care, smart diagnostics, and access to global healthcare—all under one digital umbrella. Join us as a Velby Franchise Partner and shape a purposeful business in a fast-growing sector",
-    investment: "₹2.5L",
     model: "Retail & Online",
-    origin: "Kozhikode kerala",
+    origin: "Kozhikode Kerala",
     year: "2024",
+    tierInvestments: {
+      Tier1: "₹33L - ₹38L",
+      Tier2: "₹23L - ₹28L",
+      Tier3: "₹12L - ₹20L",
+      Tier4: "₹10L - ₹17L",
+    },
+    masterFranchise: {
+      State: "₹70L - ₹95L",
+      Zonal: "₹1.75Cr - ₹1.96Cr",
+    },
   },
 ];
 
@@ -76,16 +85,7 @@ const Wellness = () => {
               <p className="mt-2">{item.description?.slice(0, 100)}...</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-3 text-gray-600 text-xs">
                 <div>
-                  <strong>Investment:</strong> {item.investment}
-                </div>
-                <div>
-                  <strong>Space:</strong> {item.sqft}
-                </div>
-                <div>
                   <strong>Model:</strong> {item.model}
-                </div>
-                <div>
-                  <strong>Franchisees:</strong> {item.franchisees}
                 </div>
                 <div>
                   <strong>Brand Origin:</strong> {item.origin}
@@ -95,13 +95,34 @@ const Wellness = () => {
                 </div>
               </div>
 
-              {/* Toggle Description */}
+              {/* Expanded Details */}
               {expandedIndex === index && (
                 <div className="bg-gray-100 p-3 rounded mt-2 text-xs">
                   <p>{item.description}</p>
+
+                  {/* Tier Investment Details */}
+                  <div className="mt-4 text-gray-700">
+                    <h3 className="font-semibold mb-1">Tier Investment:</h3>
+                    <ul className="list-disc ml-5 space-y-1">
+                      <li><strong>Tier 1 Metro:</strong> {item.tierInvestments?.Tier1}</li>
+                      <li><strong>Tier 2 Metro:</strong> {item.tierInvestments?.Tier2}</li>
+                      <li><strong>Tier 3:</strong> {item.tierInvestments?.Tier3}</li>
+                      <li><strong>Tier 4:</strong> {item.tierInvestments?.Tier4}</li>
+                    </ul>
+                  </div>
+
+                  {/* Master Franchise Details */}
+                  <div className="mt-4 text-gray-700">
+                    <h3 className="font-semibold mb-1">Master Franchise Options:</h3>
+                    <ul className="list-disc ml-5 space-y-1">
+                      <li><strong>State Level:</strong> {item.masterFranchise?.State}</li>
+                      <li><strong>Zonal Level:</strong> {item.masterFranchise?.Zonal}</li>
+                    </ul>
+                  </div>
+
                   <button
                     onClick={() => toggleDescription(index)}
-                    className="text-red-500 text-xs mt-2 underline"
+                    className="text-red-500 text-xs mt-4 underline"
                   >
                     Close
                   </button>

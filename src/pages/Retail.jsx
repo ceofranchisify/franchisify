@@ -8,7 +8,7 @@ const franchises = [
   {
     name: "Zerash",
     logo: zearash,
-    investment: "₹5 Lakhs",
+    investment: "₹38-53 Lakhs",
     sqft: "120 - 200 sq.ft",
     rating: "4.5",
     description: "Zerash offers a unique retail franchise experience with strong customer service.",

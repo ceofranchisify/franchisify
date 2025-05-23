@@ -226,12 +226,13 @@ const Restaurant = () => {
       </div>
 
       {/* Breadcrumb */}
-      <div className="max-w-6xl mx-auto px-4 mt-4 text-sm text-gray-600">
-        <Link to="/" className="text-blue-600 hover:underline">
-          Home
-        </Link>{" "}
-        / <span className="text-gray-700">Restaurant Franchises</span>
-      </div>
+      <div className="p-4 bg-white shadow text-gray-700 text-sm">
+              <Link to="/" className="hover:text-orange-500 font-medium">
+                Home
+              </Link>
+              <span className="mx-1"> / </span>
+              <span className="font-semibold">Restaurant</span>
+            </div>
 
       {/* Cards */}
       <div className="px-4 py-8 space-y-6 max-w-6xl mx-auto">

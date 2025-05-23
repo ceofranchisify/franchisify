@@ -64,18 +64,18 @@ const Digital = () => {
             />
 
             {/* Info */}
-            <div className="flex-1 space-y-1 text-sm text-gray-700">
-              <h2 className="text-lg font-semibold text-gray-900">{item.name}</h2>
+            <div className="flex-1 space-y-1 text-sm text-gray-900">
+              <h2 className="text-2xl font-bold text-gray-900">{item.name}</h2>
               <div className="flex flex-wrap gap-2 items-center text-xs">
-                <span className="bg-green-100 text-green-700 px-2 py-1 rounded">
+                <span className="bg-green-900 text-white px-2 py-1 rounded">
                   4.5 Google Ratings
                 </span>
-                <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                <span className="bg-blue-900 text-white px-2 py-1 rounded">
                   Verified Brand
                 </span>
               </div>
               <p className="mt-2">{item.description?.slice(0, 100)}...</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-3 text-gray-600 text-xs">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-3 text-black text-xs">
                 <div>
                   <strong>Investment:</strong> {item.investment}
                 </div>
@@ -114,13 +114,168 @@ const Digital = () => {
             <div className="flex flex-col items-end justify-center ml-auto">
               <button
                 onClick={() => toggleDescription(index)}
-                className="text-sm text-blue-600 border border-blue-500 px-4 py-1 rounded hover:bg-blue-50"
+                className="text-sm text-[#0F172A] border border-[#0F172A] px-4 py-1 rounded hover:bg-blue-50"
               >
                 {expandedIndex === index ? "Hide Details" : "View Details"}
               </button>
               <Link
                 to="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-1 mt-2 rounded"
+                className="bg-[#0F172A] 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                5hover:bg-blue-700 text-white text-sm px-4 py-1 mt-2 rounded"
               >
                 Contact Brand
               </Link>
